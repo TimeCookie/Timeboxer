@@ -10,54 +10,92 @@ import SwiftUI
 
 struct AddTimeboxView: View {
     
+//    @Binding var isPresenting: Bool
     @State var activityName = UserDefaults.standard.string(forKey: "ACTIVITY_NAME") ?? ""
     @State var activityNameInput = ""
+    @State var additionalInfo = "Add a description"
+    
+    @State private var startTime = Date()
+    @State private var endTime = Date()
     
     var body: some View {
-        VStack {
-            HStack {
+        NavigationView {
+            VStack {
                 
-                Button(action: {
-                    
-                }, label: {
-                    Text("Cancel")
-                })
-                .padding(.leading)
-                
-                Spacer()
-                
-                Text("Add Timebox").bold()
-                
-                Spacer()
-                
-                Button(action: {
-                    
-                    // Save here
-                    UserDefaults.standard.set(activityNameInput, forKey: "ACTIVITY_NAME")
-                    activityName = activityNameInput
-                    
-                    
-                }, label: {
-                    Text("Save").bold()
-                })
-                .padding(.trailing)
+                Form {
+                    Section(header:Text("Timebox Setting")) {
+                        List {
+                            TextField("Activity name", text:$activityNameInput)
+                            
+                            DatePicker(
+                                "Start time",
+                                selection:$startTime,
+                                displayedComponents: [.hourAndMinute]
+                            )
+                            DatePicker(
+                                "End time",
+                                selection:$endTime,
+                                displayedComponents: [.hourAndMinute]
+                            )
+                            if(endTime < startTime) {
+                                Text("End time earlier than start time!")
+                                    .foregroundColor(Color.red)
+                            }
+                        }
+                    }
+                    Section(header:Text("Reminder Setting")) {
+                        List {
+                            Text("Reminder")
+                        }
+                    }
+                    Section(header: Text("Additional Info")) {
+                        List {
+                            TextEditor(text: $additionalInfo)
+                        }
+                    }
+                }
                 
                 
             }
-            Form {
-                Section(header: Text("Timebox settings")) {
-                    TextField("Activity name", text: $activityNameInput)
+            .navigationTitle("Add Timebox")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+//                        self.isPresenting.toggle()
+                    }, label: {
+                        Text("Cancel")
+                            .padding()
+                    })
                 }
-                Section(header: Text("Saved data")) {
-                    Text(activityName)
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        // Save here
+                        UserDefaults.standard.set(activityNameInput, forKey: "ACTIVITY_NAME")
+                        activityName = activityNameInput
+
+
+                    }, label: {
+                        Text("Save").bold()
+                    })
+                    .padding(.trailing)
                 }
             }
         }
         
+        
     }
 }
+
+// Comment this when building
+
+
 struct AddTimeboxView_Previews: PreviewProvider {
     static var previews: some View {
+
         AddTimeboxView()
     }
 }
+
+
+

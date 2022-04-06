@@ -12,6 +12,9 @@
 		F2C6A3B427FB322800690472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C6A3B327FB322800690472 /* Assets.xcassets */; };
 		F2C6A3B727FB322800690472 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C6A3B627FB322800690472 /* Preview Assets.xcassets */; };
 		F2C6A3BF27FB324200690472 /* AddTimeboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C6A3BE27FB324200690472 /* AddTimeboxView.swift */; };
+		F2FE4DE227FBEBC200D280D8 /* NewTimeboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE4DE127FBEBC200D280D8 /* NewTimeboxView.swift */; };
+		F2FE4DE527FBEE4400D280D8 /* TimeboxData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE4DE427FBEE4400D280D8 /* TimeboxData.swift */; };
+		F2FE4DE827FC3E4600D280D8 /* MuteReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE4DE727FC3E4600D280D8 /* MuteReminderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		F2C6A3B327FB322800690472 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2C6A3B627FB322800690472 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F2C6A3BE27FB324200690472 /* AddTimeboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeboxView.swift; sourceTree = "<group>"; };
+		F2FE4DE127FBEBC200D280D8 /* NewTimeboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTimeboxView.swift; sourceTree = "<group>"; };
+		F2FE4DE427FBEE4400D280D8 /* TimeboxData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeboxData.swift; sourceTree = "<group>"; };
+		F2FE4DE727FC3E4600D280D8 /* MuteReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteReminderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 		F2C6A3AE27FB322700690472 /* TimeboxerApp */ = {
 			isa = PBXGroup;
 			children = (
+				F2FE4DE327FBEE3200D280D8 /* Data */,
 				F2C6A3BD27FB323400690472 /* Views */,
 				F2C6A3AF27FB322700690472 /* TimeboxerAppApp.swift */,
 				F2C6A3B127FB322700690472 /* ContentView.swift */,
@@ -74,8 +81,18 @@
 			isa = PBXGroup;
 			children = (
 				F2C6A3BE27FB324200690472 /* AddTimeboxView.swift */,
+				F2FE4DE127FBEBC200D280D8 /* NewTimeboxView.swift */,
+				F2FE4DE727FC3E4600D280D8 /* MuteReminderView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F2FE4DE327FBEE3200D280D8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F2FE4DE427FBEE4400D280D8 /* TimeboxData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +166,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2C6A3B227FB322700690472 /* ContentView.swift in Sources */,
+				F2FE4DE227FBEBC200D280D8 /* NewTimeboxView.swift in Sources */,
 				F2C6A3BF27FB324200690472 /* AddTimeboxView.swift in Sources */,
 				F2C6A3B027FB322700690472 /* TimeboxerAppApp.swift in Sources */,
+				F2FE4DE527FBEE4400D280D8 /* TimeboxData.swift in Sources */,
+				F2FE4DE827FC3E4600D280D8 /* MuteReminderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
