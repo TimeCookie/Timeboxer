@@ -8,57 +8,41 @@
 import SwiftUI
 
 
-extension UIScreen{
-   static let screenWidth = UIScreen.main.bounds.size.width
-   static let screenHeight = UIScreen.main.bounds.size.height
-   static let screenSize = UIScreen.main.bounds.size
-}
-
 struct ContentView: View {
-    @State var navigateLink = false
+    @State public var isPresenting: Bool = false
+    @State var selectedItem: Int = 1
+    @State var oldSelectedItem: Int = 1
+    
     var body: some View {
-        NavigationView {
-            VStack {
-                HStack {
-                    VStack {
-                        Text("01")
-                            .bold()
-                            .padding(.leading)
-                            
-                            
-                        Text("January")
-                            .bold()
-                            .padding(.leading)
-                            
-                    }
-                    
-                    
-                    Spacer()
-                    
-                    VStack {
-                        Text("Good Morning,")
-                            .bold()
-                            .padding(.trailing)
-                            
-                        Text("Marvin")
-                            .bold()
-                            
-                    }
+        TabView(selection: $selectedItem){
+                NewTimeboxView()
+                    .tabItem {
+                        Label("Timebox", systemImage: "rectangle.grid.1x2.fill")
+                    }.tag(1)
+                .onAppear {
+                    self.oldSelectedItem = self.selectedItem
                 }
-                VStack{
-                    Button(action: {
-                        navigateLink = true
-                    }, label: {
-                        Text("Label").padding([ .trailing],UIScreen.screenWidth/2)
-                    })
-                    .background(Color.blue)
-                    .foregroundColor(Color.white)
-                    NavigationLink("", destination:AddTimeboxView(),isActive: $navigateLink)
+
+                Text("")
+                    .tabItem { Label("Add",systemImage: "plus") }
+                    .tag(2)
+                .onAppear {
+                    self.isPresenting = true
+                    self.selectedItem = self.oldSelectedItem
+
                 }
-                Spacer()
-                
+
+                MuteReminderView()
+                    .tabItem {
+                        Label("Reminders",systemImage: "bell.fill")
+                    }.tag(3)
+                .onAppear {
+                    self.oldSelectedItem = self.selectedItem
+                }
             }
-        }
+            .sheet(isPresented: $isPresenting) {
+//                AddTimeboxView(isPresenting: $isPresenting)
+            }
     }
 }
 
