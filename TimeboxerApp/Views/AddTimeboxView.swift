@@ -12,11 +12,11 @@ struct AddTimeboxView: View {
     
 //    @Binding var isPresenting: Bool
     @State var activityName = UserDefaults.standard.string(forKey: "ACTIVITY_NAME") ?? ""
-    @State var activityNameInput = ""
-    @State var additionalInfo = "Add a description"
-    
-    @State private var startTime = Date()
-    @State private var endTime = Date()
+    @State private var activityNameInput:String = ""
+    @State private var additionalInfo:String = "Add a description"
+    @State private var reminder:String = ""
+    @State private var startTime:Date = Date()
+    @State private var endTime:Date = Date()
     
     var body: some View {
         NavigationView {
@@ -45,7 +45,17 @@ struct AddTimeboxView: View {
                     }
                     Section(header:Text("Reminder Setting")) {
                         List {
-                            Text("Reminder")
+                            Menu("Reminder") {
+                                Button("5 minutes after", action: {
+                                    self.reminder = "5 minutes after"
+                                })
+                                Button("5 minutes before", action: {
+                                    self.reminder = "5 minutes before"
+                                })
+                                Button("Turn off reminder", action: {
+                                    self.reminder = "off"
+                                })
+                            }
                         }
                     }
                     Section(header: Text("Additional Info")) {
@@ -71,9 +81,9 @@ struct AddTimeboxView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         // Save here
+                        
                         UserDefaults.standard.set(activityNameInput, forKey: "ACTIVITY_NAME")
                         activityName = activityNameInput
-
 
                     }, label: {
                         Text("Save").bold()
