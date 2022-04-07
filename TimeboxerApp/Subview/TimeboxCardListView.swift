@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct TimeboxCardListView: View {
+    @ObservedObject var ActiveTimebox: TimeboxData = TimeboxData.shared
     var body: some View {
-        VStack {
-            
-            ForEach(activeTimebox) { item in
-                NavigationLink(destination: EditTimeboxView()) {
-                    List {
+        if(ActiveTimebox.activeTimebox.count > 0) {
+            List {
+                ForEach(ActiveTimebox.activeTimebox) { item in
+                    
+                    let startTime = ExtractTime(extractMode: "hh:mm", el: item.startTime)
+                    let endTime = ExtractTime(extractMode: "hh:mm", el: item.endTime)
+                    
+                    HStack {
+                        Text("\(startTime) - \(endTime)")
+                            .padding(.vertical)
+                        Spacer()
                         Text(item.activityName)
+                            .padding(.vertical)
                     }
                 }
             }
@@ -25,14 +33,5 @@ struct TimeboxCardListView: View {
 struct TimeboxCardListView_Previews: PreviewProvider {
     static var previews: some View {
         TimeboxCardListView()
-    }
-}
-
-struct TimeboxCard: View {
-    @Binding var activityName: String
-    var body: some View {
-        HStack {
-            Text("Activity name")
-        }
     }
 }

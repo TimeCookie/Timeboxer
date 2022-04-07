@@ -10,7 +10,7 @@ import Foundation
 
 func saveData(_ tb:Timebox) {
 
-    
-    activeTimebox.append(tb)
-    UserDefaults.standard.setValue(activeTimebox,forKey: "TIMEBOX_DATA")
+    TimeboxData.shared.activeTimebox.append(tb)
+//    UserDefaults.standard.setValue(activeTimebox,forKey: "TIMEBOX_DATA")
 }
+

@@ -85,6 +85,8 @@ struct AddTimeboxView: View {
                         let newTimebox: Timebox = Timebox(id:UUID(), activityName: activityNameInput, startTime: startTime, endTime: endTime, reminder: reminder, description: additionalInfo, isFinished: false)
                         
                         saveData(newTimebox)
+                        self.isPresenting.toggle()
+                        
 
                     }, label: {
                         Text("Save").bold()

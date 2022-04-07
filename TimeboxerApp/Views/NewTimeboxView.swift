@@ -44,11 +44,8 @@ struct NewTimeboxView: View {
                 }
             }
             NavigationView {
-                List {
-                    NavigationLink(destination: MuteReminderView()) {
-                        Text("Test")
-                    }
-                }
+                TimeboxCardListView()
+                
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationTitle("Timeboxes")
             }
