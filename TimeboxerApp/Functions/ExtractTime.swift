@@ -7,7 +7,7 @@
 
 import Foundation
 
-func ExtractTime(extractMode: String, el: Date) -> String {
+func extractTime(extractMode: String, el: Date) -> String {
     var components: [Int] = []
     var extractedTime: String = ""
     
@@ -42,7 +42,13 @@ func ExtractTime(extractMode: String, el: Date) -> String {
         extractedTime = String(components[0])
     } else {
         for i in 0..<components.count {
-            extractedTime = (i == components.count-1) ? (extractedTime + "\(components[i])") : (extractedTime + "\(components[i]):")
+            var temp:String = String(components[i])
+            // Check for ignored zero
+            if (components[i] / 10) < 1 {
+                temp = "0\(temp)"
+            }
+            
+            extractedTime = (i == components.count-1) ? (extractedTime + "\(temp)") : (extractedTime + "\(temp):")
         }
     }
     return extractedTime

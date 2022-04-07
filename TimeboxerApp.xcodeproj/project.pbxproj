@@ -21,6 +21,7 @@
 		F2F6BF4827FEAB2A00D3B2E2 /* IntroNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF4727FEAB2A00D3B2E2 /* IntroNameView.swift */; };
 		F2F6BF4A27FF0A1300D3B2E2 /* TimeboxData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF4927FF0A1300D3B2E2 /* TimeboxData.swift */; };
 		F2F6BF4D27FF117D00D3B2E2 /* ExtractTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF4C27FF117D00D3B2E2 /* ExtractTime.swift */; };
+		F2F6BF4F27FF18C100D3B2E2 /* EditData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF4E27FF18C100D3B2E2 /* EditData.swift */; };
 		F2FE4DE227FBEBC200D280D8 /* NewTimeboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE4DE127FBEBC200D280D8 /* NewTimeboxView.swift */; };
 		F2FE4DE827FC3E4600D280D8 /* MuteReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE4DE727FC3E4600D280D8 /* MuteReminderView.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		F2F6BF4727FEAB2A00D3B2E2 /* IntroNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroNameView.swift; sourceTree = "<group>"; };
 		F2F6BF4927FF0A1300D3B2E2 /* TimeboxData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeboxData.swift; sourceTree = "<group>"; };
 		F2F6BF4C27FF117D00D3B2E2 /* ExtractTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractTime.swift; sourceTree = "<group>"; };
+		F2F6BF4E27FF18C100D3B2E2 /* EditData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditData.swift; sourceTree = "<group>"; };
 		F2FE4DE127FBEBC200D280D8 /* NewTimeboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTimeboxView.swift; sourceTree = "<group>"; };
 		F2FE4DE727FC3E4600D280D8 /* MuteReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteReminderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +80,7 @@
 				F2A2A68527FDC6BF001C4EF8 /* SaveData.swift */,
 				F2F6BF4327FEA6E200D3B2E2 /* DeleteData.swift */,
 				F2F6BF4C27FF117D00D3B2E2 /* ExtractTime.swift */,
+				F2F6BF4E27FF18C100D3B2E2 /* EditData.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				F2C6A3BF27FB324200690472 /* AddTimeboxView.swift in Sources */,
 				F2A2A66027FD9067001C4EF8 /* Timebox.swift in Sources */,
 				F2F6BF4627FEAA1C00D3B2E2 /* WelcomeView.swift in Sources */,
+				F2F6BF4F27FF18C100D3B2E2 /* EditData.swift in Sources */,
 				F2A2A68627FDC6BF001C4EF8 /* SaveData.swift in Sources */,
 				F2F6BF4827FEAB2A00D3B2E2 /* IntroNameView.swift in Sources */,
 				F2C6A3B027FB322700690472 /* TimeboxerAppApp.swift in Sources */,

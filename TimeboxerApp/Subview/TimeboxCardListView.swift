@@ -14,8 +14,8 @@ struct TimeboxCardListView: View {
             List {
                 ForEach(ActiveTimebox.activeTimebox) { item in
                     
-                    let startTime = ExtractTime(extractMode: "hh:mm", el: item.startTime)
-                    let endTime = ExtractTime(extractMode: "hh:mm", el: item.endTime)
+                    let startTime = extractTime(extractMode: "hh:mm", el: item.startTime)
+                    let endTime = extractTime(extractMode: "hh:mm", el: item.endTime)
                     
                     HStack {
                         Text("\(startTime) - \(endTime)")
