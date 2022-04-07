@@ -7,4 +7,5 @@
 
 import Foundation
 
-public var activeTimebox = 
+internal var activeTimebox = [Timebox]()
+

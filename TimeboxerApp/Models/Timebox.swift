@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Timebox {
+struct Timebox: Identifiable {
+    var id:UUID?
     var activityName: String
     var startTime: Date
     var endTime: Date
