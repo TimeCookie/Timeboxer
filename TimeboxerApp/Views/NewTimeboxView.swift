@@ -44,11 +44,8 @@ struct NewTimeboxView: View {
                 }
             }
             NavigationView {
-                List {
-                    NavigationLink(destination: MuteReminderView()) {
-                        TimeboxCard()
-                    }
-                }
+                TimeboxCardListView()
+                
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationTitle("Timeboxes")
             }
@@ -64,12 +61,4 @@ struct NewTimeboxView_Previews: PreviewProvider {
     }
 }
 
-struct TimeboxCard: View {
-    var body: some View {
-        HStack {
-            Text("09.00 - 12.00")
-            Spacer()
-            Text("Activity name")
-        }
-    }
-}
+

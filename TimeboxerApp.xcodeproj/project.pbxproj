@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		F2A2A65B27FD7953001C4EF8 /* EditTimeboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2A65A27FD7953001C4EF8 /* EditTimeboxView.swift */; };
 		F2A2A66027FD9067001C4EF8 /* Timebox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2A65F27FD9067001C4EF8 /* Timebox.swift */; };
-		F2A2A66327FD96F1001C4EF8 /* TimeboxDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2A66227FD96F1001C4EF8 /* TimeboxDataStorage.swift */; };
+		F2A2A68627FDC6BF001C4EF8 /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2A68527FDC6BF001C4EF8 /* SaveData.swift */; };
 		F2C6A3B027FB322700690472 /* TimeboxerAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C6A3AF27FB322700690472 /* TimeboxerAppApp.swift */; };
 		F2C6A3B227FB322700690472 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C6A3B127FB322700690472 /* ContentView.swift */; };
 		F2C6A3B427FB322800690472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C6A3B327FB322800690472 /* Assets.xcassets */; };
 		F2C6A3B727FB322800690472 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2C6A3B627FB322800690472 /* Preview Assets.xcassets */; };
 		F2C6A3BF27FB324200690472 /* AddTimeboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C6A3BE27FB324200690472 /* AddTimeboxView.swift */; };
+		F2F6BF3F27FE943100D3B2E2 /* TimeboxCardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF3E27FE943100D3B2E2 /* TimeboxCardListView.swift */; };
+		F2F6BF4427FEA6E200D3B2E2 /* DeleteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF4327FEA6E200D3B2E2 /* DeleteData.swift */; };
+		F2F6BF4627FEAA1C00D3B2E2 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF4527FEAA1C00D3B2E2 /* WelcomeView.swift */; };
+		F2F6BF4827FEAB2A00D3B2E2 /* IntroNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF4727FEAB2A00D3B2E2 /* IntroNameView.swift */; };
+		F2F6BF4A27FF0A1300D3B2E2 /* TimeboxData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF4927FF0A1300D3B2E2 /* TimeboxData.swift */; };
+		F2F6BF4D27FF117D00D3B2E2 /* ExtractTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF4C27FF117D00D3B2E2 /* ExtractTime.swift */; };
 		F2FE4DE227FBEBC200D280D8 /* NewTimeboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE4DE127FBEBC200D280D8 /* NewTimeboxView.swift */; };
 		F2FE4DE827FC3E4600D280D8 /* MuteReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE4DE727FC3E4600D280D8 /* MuteReminderView.swift */; };
 /* End PBXBuildFile section */
@@ -22,13 +28,19 @@
 /* Begin PBXFileReference section */
 		F2A2A65A27FD7953001C4EF8 /* EditTimeboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimeboxView.swift; sourceTree = "<group>"; };
 		F2A2A65F27FD9067001C4EF8 /* Timebox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timebox.swift; sourceTree = "<group>"; };
-		F2A2A66227FD96F1001C4EF8 /* TimeboxDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeboxDataStorage.swift; sourceTree = "<group>"; };
+		F2A2A68527FDC6BF001C4EF8 /* SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
 		F2C6A3AC27FB322700690472 /* TimeboxerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeboxerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C6A3AF27FB322700690472 /* TimeboxerAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeboxerAppApp.swift; sourceTree = "<group>"; };
 		F2C6A3B127FB322700690472 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F2C6A3B327FB322800690472 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2C6A3B627FB322800690472 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F2C6A3BE27FB324200690472 /* AddTimeboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeboxView.swift; sourceTree = "<group>"; };
+		F2F6BF3E27FE943100D3B2E2 /* TimeboxCardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeboxCardListView.swift; sourceTree = "<group>"; };
+		F2F6BF4327FEA6E200D3B2E2 /* DeleteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteData.swift; sourceTree = "<group>"; };
+		F2F6BF4527FEAA1C00D3B2E2 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		F2F6BF4727FEAB2A00D3B2E2 /* IntroNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroNameView.swift; sourceTree = "<group>"; };
+		F2F6BF4927FF0A1300D3B2E2 /* TimeboxData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeboxData.swift; sourceTree = "<group>"; };
+		F2F6BF4C27FF117D00D3B2E2 /* ExtractTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractTime.swift; sourceTree = "<group>"; };
 		F2FE4DE127FBEBC200D280D8 /* NewTimeboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTimeboxView.swift; sourceTree = "<group>"; };
 		F2FE4DE727FC3E4600D280D8 /* MuteReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteReminderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,9 +67,19 @@
 		F2A2A66127FD96D8001C4EF8 /* DataStorage */ = {
 			isa = PBXGroup;
 			children = (
-				F2A2A66227FD96F1001C4EF8 /* TimeboxDataStorage.swift */,
+				F2F6BF4927FF0A1300D3B2E2 /* TimeboxData.swift */,
 			);
 			path = DataStorage;
+			sourceTree = "<group>";
+		};
+		F2A2A68427FDC6AD001C4EF8 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				F2A2A68527FDC6BF001C4EF8 /* SaveData.swift */,
+				F2F6BF4327FEA6E200D3B2E2 /* DeleteData.swift */,
+				F2F6BF4C27FF117D00D3B2E2 /* ExtractTime.swift */,
+			);
+			path = Functions;
 			sourceTree = "<group>";
 		};
 		F2C6A3A327FB322700690472 = {
@@ -79,6 +101,8 @@
 		F2C6A3AE27FB322700690472 /* TimeboxerApp */ = {
 			isa = PBXGroup;
 			children = (
+				F2F6BF4027FEA64A00D3B2E2 /* Subview */,
+				F2A2A68427FDC6AD001C4EF8 /* Functions */,
 				F2A2A66127FD96D8001C4EF8 /* DataStorage */,
 				F2A2A65E27FD9055001C4EF8 /* Models */,
 				F2C6A3BD27FB323400690472 /* Views */,
@@ -101,12 +125,22 @@
 		F2C6A3BD27FB323400690472 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F2C6A3BE27FB324200690472 /* AddTimeboxView.swift */,
 				F2FE4DE127FBEBC200D280D8 /* NewTimeboxView.swift */,
 				F2FE4DE727FC3E4600D280D8 /* MuteReminderView.swift */,
-				F2A2A65A27FD7953001C4EF8 /* EditTimeboxView.swift */,
+				F2F6BF4527FEAA1C00D3B2E2 /* WelcomeView.swift */,
+				F2F6BF4727FEAB2A00D3B2E2 /* IntroNameView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F2F6BF4027FEA64A00D3B2E2 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				F2A2A65A27FD7953001C4EF8 /* EditTimeboxView.swift */,
+				F2C6A3BE27FB324200690472 /* AddTimeboxView.swift */,
+				F2F6BF3E27FE943100D3B2E2 /* TimeboxCardListView.swift */,
+			);
+			path = Subview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,13 +213,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2F6BF4D27FF117D00D3B2E2 /* ExtractTime.swift in Sources */,
 				F2C6A3B227FB322700690472 /* ContentView.swift in Sources */,
+				F2F6BF4427FEA6E200D3B2E2 /* DeleteData.swift in Sources */,
 				F2FE4DE227FBEBC200D280D8 /* NewTimeboxView.swift in Sources */,
-				F2A2A66327FD96F1001C4EF8 /* TimeboxDataStorage.swift in Sources */,
+				F2F6BF3F27FE943100D3B2E2 /* TimeboxCardListView.swift in Sources */,
 				F2C6A3BF27FB324200690472 /* AddTimeboxView.swift in Sources */,
 				F2A2A66027FD9067001C4EF8 /* Timebox.swift in Sources */,
+				F2F6BF4627FEAA1C00D3B2E2 /* WelcomeView.swift in Sources */,
+				F2A2A68627FDC6BF001C4EF8 /* SaveData.swift in Sources */,
+				F2F6BF4827FEAB2A00D3B2E2 /* IntroNameView.swift in Sources */,
 				F2C6A3B027FB322700690472 /* TimeboxerAppApp.swift in Sources */,
 				F2A2A65B27FD7953001C4EF8 /* EditTimeboxView.swift in Sources */,
+				F2F6BF4A27FF0A1300D3B2E2 /* TimeboxData.swift in Sources */,
 				F2FE4DE827FC3E4600D280D8 /* MuteReminderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,8 +10,8 @@ import SwiftUI
 
 struct AddTimeboxView: View {
     
-//    @Binding var isPresenting: Bool
-    @State var activityName = UserDefaults.standard.string(forKey: "ACTIVITY_NAME") ?? ""
+    @Binding var isPresenting: Bool
+//    @State var activityName = UserDefaults.standard.string(forKey: "ACTIVITY_NAME") ?? ""
     @State private var activityNameInput:String = ""
     @State private var additionalInfo:String = "Add a description"
     @State private var reminder:String = ""
@@ -21,7 +21,6 @@ struct AddTimeboxView: View {
     var body: some View {
         NavigationView {
             VStack {
-                
                 Form {
                     Section(header:Text("Timebox Setting")) {
                         List {
@@ -63,6 +62,7 @@ struct AddTimeboxView: View {
                             TextEditor(text: $additionalInfo)
                         }
                     }
+                    
                 }
                 
                 
@@ -72,7 +72,7 @@ struct AddTimeboxView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
-//                        self.isPresenting.toggle()
+                        self.isPresenting.toggle()
                     }, label: {
                         Text("Cancel")
                             .padding()
@@ -82,8 +82,11 @@ struct AddTimeboxView: View {
                     Button(action: {
                         // Save here
                         
-                        UserDefaults.standard.set(activityNameInput, forKey: "ACTIVITY_NAME")
-                        activityName = activityNameInput
+                        let newTimebox: Timebox = Timebox(id:UUID(), activityName: activityNameInput, startTime: startTime, endTime: endTime, reminder: reminder, description: additionalInfo, isFinished: false)
+                        
+                        saveData(newTimebox)
+                        self.isPresenting.toggle()
+                        
 
                     }, label: {
                         Text("Save").bold()
@@ -101,11 +104,23 @@ struct AddTimeboxView: View {
 
 
 struct AddTimeboxView_Previews: PreviewProvider {
+    @State static var isPresenting:Bool = true
+    
     static var previews: some View {
-
-        AddTimeboxView()
+        AddTimeboxView(isPresenting: $isPresenting)
     }
 }
 
 
 
+
+
+/*
+ 
+Save to userdefaults
+ 
+ UserDefaults.standard.set(activityNameInput, forKey: "ACTIVITY_NAME")
+ activityName = activityNameInput
+ 
+ 
+ */
