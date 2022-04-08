@@ -42,6 +42,7 @@ struct AddTimeboxView: View {
                             }
                         }
                     }
+                    
                     Section(header:Text("Reminder Setting")) {
                         List {
                             Menu("Reminder") {
@@ -87,7 +88,6 @@ struct AddTimeboxView: View {
                         saveData(newTimebox)
                         self.isPresenting.toggle()
                         
-
                     }, label: {
                         Text("Save").bold()
                     })

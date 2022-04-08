@@ -11,11 +11,8 @@ import SwiftUI
 
 
 struct EditTimeboxView: View {
-    @State private var activityName: String = "Activity Name"
-    @State private var startTime: Date = Date()
-    @State private var endTime: Date = Date()
-    @State private var reminder: String = ""
-    @State private var additionalInfo: String = "Description"
+    @Binding var isEditing: Bool
+    @Binding var editingTimebox: Timebox
     
     var body: some View {
         NavigationView {
@@ -23,15 +20,15 @@ struct EditTimeboxView: View {
                 Form {
                     Section(header: Text("Timebox Setting")) {
                         List {
-                            TextField("Activity Name",text:$activityName)
+                            TextField("Activity Name",text:$editingTimebox.activityName)
                             DatePicker(
                                 "Start time",
-                                selection:$startTime,
+                                selection: $editingTimebox.startTime,
                                 displayedComponents: [.hourAndMinute]
                             )
                             DatePicker(
                                 "End time",
-                                selection: $endTime,
+                                selection: $editingTimebox.endTime,
                                 displayedComponents: [.hourAndMinute]
                             )
                         }
@@ -40,20 +37,20 @@ struct EditTimeboxView: View {
                         List {
                             Menu("Reminder") {
                                 Button("5 minutes after", action: {
-                                    self.reminder = "5 minutes after"
+                                    editingTimebox.reminder = "5 minutes after"
                                 })
                                 Button("5 minutes before", action: {
-                                    self.reminder = "5 minutes before"
+                                    editingTimebox.reminder = "5 minutes before"
                                 })
                                 Button("Turn off reminder", action: {
-                                    self.reminder = "off"
+                                    editingTimebox.reminder = "off"
                                 })
                             }
                         }
                     }
                     Section(header: Text("Additional Info")) {
                         List {
-                            TextEditor(text:$additionalInfo)
+                            TextEditor(text:$editingTimebox.description)
                         }
                     }
                     Button(action:{
@@ -76,6 +73,7 @@ struct EditTimeboxView: View {
                     Button(action: {
                         
                         // Cancel logic here
+                        self.isEditing = false
                         
                     }, label: {
                         Text("Cancel")
@@ -86,6 +84,8 @@ struct EditTimeboxView: View {
                     Button(action: {
                         
                         // Save logic
+                        self.isEditing = false
+                        editData(editingTimebox)
                         
                     }, label: {
                         Text("Save")
@@ -98,7 +98,11 @@ struct EditTimeboxView: View {
 }
 
 struct EditTimeboxView_Previews: PreviewProvider {
+    
+    @State static var isEditing: Bool = true
+    @State static var currentTimebox: Timebox = TimeboxData.shared.activeTimebox[0]
+    
     static var previews: some View {
-        EditTimeboxView()
+        EditTimeboxView(isEditing: $isEditing, editingTimebox: $currentTimebox)
     }
 }

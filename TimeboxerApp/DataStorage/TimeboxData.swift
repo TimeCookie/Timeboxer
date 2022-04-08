@@ -10,5 +10,7 @@ import Foundation
 class TimeboxData: ObservableObject {
     static let shared = TimeboxData()
     
-    @Published var activeTimebox: [Timebox] = []
+    @Published var activeTimebox: [Timebox] = [
+        Timebox(activityName: "Playing game", startTime: Date(), endTime: Date(), reminder: "off", description: "This is a description", isFinished: false)
+    ]
 }

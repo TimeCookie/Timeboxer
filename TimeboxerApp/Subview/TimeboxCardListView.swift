@@ -9,21 +9,31 @@ import SwiftUI
 
 struct TimeboxCardListView: View {
     @ObservedObject var ActiveTimebox: TimeboxData = TimeboxData.shared
+    @State var isOpen: Bool = false
+    
     var body: some View {
         if(ActiveTimebox.activeTimebox.count > 0) {
             List {
-                ForEach(ActiveTimebox.activeTimebox) { item in
+                ForEach($ActiveTimebox.activeTimebox) { $tb in
                     
-                    let startTime = extractTime(extractMode: "hh:mm", el: item.startTime)
-                    let endTime = extractTime(extractMode: "hh:mm", el: item.endTime)
+                    let startTime:String = extractTime(extractMode: "hh:mm", el: tb.startTime)
+                    let endTime:String = extractTime(extractMode: "hh:mm", el: tb.endTime)
                     
-                    HStack {
-                        Text("\(startTime) - \(endTime)")
-                            .padding(.vertical)
-                        Spacer()
-                        Text(item.activityName)
-                            .padding(.vertical)
-                    }
+                    Button(action: {
+                        self.isOpen.toggle()
+                    }, label: {
+                        HStack {
+                            Text("\(startTime) - \(endTime)")
+                                .padding(.vertical)
+                            Spacer()
+                            Text(tb.activityName)
+                                .padding(.vertical)
+                        }
+                        .sheet(isPresented: $isOpen) {
+                            EditTimeboxView(isEditing: $isOpen,   editingTimebox: $tb)
+                        }
+                    })
+                    .foregroundColor(.black)
                 }
             }
         }
