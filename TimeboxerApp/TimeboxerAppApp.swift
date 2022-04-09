@@ -11,7 +11,7 @@ import SwiftUI
 struct TimeboxerAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreenView()
         }
     }
 }

@@ -14,9 +14,11 @@ struct AddTimeboxView: View {
 //    @State var activityName = UserDefaults.standard.string(forKey: "ACTIVITY_NAME") ?? ""
     @State private var activityNameInput:String = ""
     @State private var additionalInfo:String = "Add a description"
-    @State private var reminder:String = ""
+    @State private var reminder:String = "5 minutes before"
     @State private var startTime:Date = Date()
     @State private var endTime:Date = Date()
+    
+    
     
     var body: some View {
         NavigationView {
@@ -36,16 +38,13 @@ struct AddTimeboxView: View {
                                 selection:$endTime,
                                 displayedComponents: [.hourAndMinute]
                             )
-                            if(endTime < startTime) {
-                                Text("End time earlier than start time!")
-                                    .foregroundColor(Color.red)
-                            }
+                            timeWarning(startTime, endTime)
                         }
                     }
                     
                     Section(header:Text("Reminder Setting")) {
                         List {
-                            Menu("Reminder") {
+                            Menu(self.reminder) {
                                 Button("5 minutes after", action: {
                                     self.reminder = "5 minutes after"
                                 })

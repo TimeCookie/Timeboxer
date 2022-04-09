@@ -13,6 +13,8 @@ import SwiftUI
 struct EditTimeboxView: View {
     @Binding var isEditing: Bool
     @Binding var editingTimebox: Timebox
+    @State private var showAlert: Bool = false
+    
     
     var body: some View {
         NavigationView {
@@ -53,17 +55,29 @@ struct EditTimeboxView: View {
                             TextEditor(text:$editingTimebox.description)
                         }
                     }
-                    Button(action:{
-                    
-                    }, label: {
+                    Button(role: .destructive) {
+                        // Delete logic here
+                        showAlert = true
+                        
+                    } label: {
                         HStack {
                             Spacer()
                             Text("Delete")
                                 .foregroundColor(.red)
-                                .multilineTextAlignment(.center)
                             Spacer()
                         }
-                    })
+                    }
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text("Delete Timebox"),
+                              message: Text("This action cannot be undone. Are you sure?"),
+                              primaryButton: Alert.Button.destructive(Text("Delete")) {
+                                    self.isEditing = false
+                                    self.showAlert = false
+//                                    deleteData(editingTimebox)
+                                },
+                              secondaryButton: Alert.Button.cancel()
+                        )
+                    }
                 }
             }
             .navigationTitle("Edit Timebox")
