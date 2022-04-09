@@ -19,12 +19,13 @@ struct NewTimeboxView: View {
         VStack {
             HStack {
                 VStack {
-                    Text("01")
+                    Text(extractTime(extractMode:"dd", el:Date()))
                         .bold()
                         .padding(.leading)
+                        .font(.largeTitle)
                         
                         
-                    Text("January")
+                    Text(monthChecker(Int(extractTime(extractMode: "MM", el: Date()))!))
                         .bold()
                         .padding(.leading)
                         
@@ -34,11 +35,13 @@ struct NewTimeboxView: View {
                 Spacer()
                 
                 VStack {
-                    Text("Good Morning,")
+                    Text(greetingCheck(Int(extractTime(extractMode: "hh", el: Date()))!))
                         .bold()
+                        .font(.title3)
                         .padding(.trailing)
                         
                     Text("Marvin")
+                        .font(.title2)
                         .bold()
                         
                 }

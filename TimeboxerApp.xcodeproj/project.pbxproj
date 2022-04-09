@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F20CB283280168B200F64FCB /* TimeWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20CB282280168B200F64FCB /* TimeWarning.swift */; };
+		F2311A3B280158F800C906F8 /* MonthChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2311A3A280158F800C906F8 /* MonthChecker.swift */; };
+		F2311A3D28015CD000C906F8 /* GreetingCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2311A3C28015CD000C906F8 /* GreetingCheck.swift */; };
+		F28EAE042800087D002C0526 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28EAE032800087D002C0526 /* SplashScreenView.swift */; };
+		F28EAE0628000896002C0526 /* QuotesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28EAE0528000896002C0526 /* QuotesData.swift */; };
+		F28EAE0828000922002C0526 /* QuotePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28EAE0728000922002C0526 /* QuotePicker.swift */; };
 		F2A2A65B27FD7953001C4EF8 /* EditTimeboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2A65A27FD7953001C4EF8 /* EditTimeboxView.swift */; };
 		F2A2A66027FD9067001C4EF8 /* Timebox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2A65F27FD9067001C4EF8 /* Timebox.swift */; };
 		F2A2A68627FDC6BF001C4EF8 /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2A68527FDC6BF001C4EF8 /* SaveData.swift */; };
@@ -17,7 +23,6 @@
 		F2C6A3BF27FB324200690472 /* AddTimeboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C6A3BE27FB324200690472 /* AddTimeboxView.swift */; };
 		F2F6BF3F27FE943100D3B2E2 /* TimeboxCardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF3E27FE943100D3B2E2 /* TimeboxCardListView.swift */; };
 		F2F6BF4427FEA6E200D3B2E2 /* DeleteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF4327FEA6E200D3B2E2 /* DeleteData.swift */; };
-		F2F6BF4627FEAA1C00D3B2E2 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF4527FEAA1C00D3B2E2 /* WelcomeView.swift */; };
 		F2F6BF4827FEAB2A00D3B2E2 /* IntroNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF4727FEAB2A00D3B2E2 /* IntroNameView.swift */; };
 		F2F6BF4A27FF0A1300D3B2E2 /* TimeboxData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF4927FF0A1300D3B2E2 /* TimeboxData.swift */; };
 		F2F6BF4D27FF117D00D3B2E2 /* ExtractTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF4C27FF117D00D3B2E2 /* ExtractTime.swift */; };
@@ -27,6 +32,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F20CB282280168B200F64FCB /* TimeWarning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeWarning.swift; sourceTree = "<group>"; };
+		F2311A3A280158F800C906F8 /* MonthChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthChecker.swift; sourceTree = "<group>"; };
+		F2311A3C28015CD000C906F8 /* GreetingCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingCheck.swift; sourceTree = "<group>"; };
+		F28EAE032800087D002C0526 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		F28EAE0528000896002C0526 /* QuotesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesData.swift; sourceTree = "<group>"; };
+		F28EAE0728000922002C0526 /* QuotePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotePicker.swift; sourceTree = "<group>"; };
 		F2A2A65A27FD7953001C4EF8 /* EditTimeboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimeboxView.swift; sourceTree = "<group>"; };
 		F2A2A65F27FD9067001C4EF8 /* Timebox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timebox.swift; sourceTree = "<group>"; };
 		F2A2A68527FDC6BF001C4EF8 /* SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
@@ -38,7 +49,6 @@
 		F2C6A3BE27FB324200690472 /* AddTimeboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTimeboxView.swift; sourceTree = "<group>"; };
 		F2F6BF3E27FE943100D3B2E2 /* TimeboxCardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeboxCardListView.swift; sourceTree = "<group>"; };
 		F2F6BF4327FEA6E200D3B2E2 /* DeleteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteData.swift; sourceTree = "<group>"; };
-		F2F6BF4527FEAA1C00D3B2E2 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		F2F6BF4727FEAB2A00D3B2E2 /* IntroNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroNameView.swift; sourceTree = "<group>"; };
 		F2F6BF4927FF0A1300D3B2E2 /* TimeboxData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeboxData.swift; sourceTree = "<group>"; };
 		F2F6BF4C27FF117D00D3B2E2 /* ExtractTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractTime.swift; sourceTree = "<group>"; };
@@ -70,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				F2F6BF4927FF0A1300D3B2E2 /* TimeboxData.swift */,
+				F28EAE0528000896002C0526 /* QuotesData.swift */,
 			);
 			path = DataStorage;
 			sourceTree = "<group>";
@@ -81,6 +92,10 @@
 				F2F6BF4327FEA6E200D3B2E2 /* DeleteData.swift */,
 				F2F6BF4C27FF117D00D3B2E2 /* ExtractTime.swift */,
 				F2F6BF4E27FF18C100D3B2E2 /* EditData.swift */,
+				F28EAE0728000922002C0526 /* QuotePicker.swift */,
+				F2311A3A280158F800C906F8 /* MonthChecker.swift */,
+				F2311A3C28015CD000C906F8 /* GreetingCheck.swift */,
+				F20CB282280168B200F64FCB /* TimeWarning.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -130,8 +145,8 @@
 			children = (
 				F2FE4DE127FBEBC200D280D8 /* NewTimeboxView.swift */,
 				F2FE4DE727FC3E4600D280D8 /* MuteReminderView.swift */,
-				F2F6BF4527FEAA1C00D3B2E2 /* WelcomeView.swift */,
 				F2F6BF4727FEAB2A00D3B2E2 /* IntroNameView.swift */,
+				F28EAE032800087D002C0526 /* SplashScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,18 +233,23 @@
 			files = (
 				F2F6BF4D27FF117D00D3B2E2 /* ExtractTime.swift in Sources */,
 				F2C6A3B227FB322700690472 /* ContentView.swift in Sources */,
+				F28EAE042800087D002C0526 /* SplashScreenView.swift in Sources */,
 				F2F6BF4427FEA6E200D3B2E2 /* DeleteData.swift in Sources */,
 				F2FE4DE227FBEBC200D280D8 /* NewTimeboxView.swift in Sources */,
+				F20CB283280168B200F64FCB /* TimeWarning.swift in Sources */,
 				F2F6BF3F27FE943100D3B2E2 /* TimeboxCardListView.swift in Sources */,
+				F28EAE0628000896002C0526 /* QuotesData.swift in Sources */,
 				F2C6A3BF27FB324200690472 /* AddTimeboxView.swift in Sources */,
 				F2A2A66027FD9067001C4EF8 /* Timebox.swift in Sources */,
-				F2F6BF4627FEAA1C00D3B2E2 /* WelcomeView.swift in Sources */,
 				F2F6BF4F27FF18C100D3B2E2 /* EditData.swift in Sources */,
+				F2311A3B280158F800C906F8 /* MonthChecker.swift in Sources */,
 				F2A2A68627FDC6BF001C4EF8 /* SaveData.swift in Sources */,
 				F2F6BF4827FEAB2A00D3B2E2 /* IntroNameView.swift in Sources */,
+				F2311A3D28015CD000C906F8 /* GreetingCheck.swift in Sources */,
 				F2C6A3B027FB322700690472 /* TimeboxerAppApp.swift in Sources */,
 				F2A2A65B27FD7953001C4EF8 /* EditTimeboxView.swift in Sources */,
 				F2F6BF4A27FF0A1300D3B2E2 /* TimeboxData.swift in Sources */,
+				F28EAE0828000922002C0526 /* QuotePicker.swift in Sources */,
 				F2FE4DE827FC3E4600D280D8 /* MuteReminderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
