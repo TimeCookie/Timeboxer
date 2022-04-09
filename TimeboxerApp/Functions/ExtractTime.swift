@@ -39,12 +39,17 @@ func extractTime(extractMode: String, el: Date) -> String {
     }
     
     if(components.count == 1) {
-        extractedTime = String(components[0])
+        if(components[0] < 10) {
+            extractedTime = "0\(components[0])"
+        }
+        else {
+            return String(components[0])
+        }
     } else {
         for i in 0..<components.count {
             var temp:String = String(components[i])
             // Check for ignored zero
-            if (components[i] / 10) < 1 {
+            if components[i] < 10 {
                 temp = "0\(temp)"
             }
             
