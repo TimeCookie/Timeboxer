@@ -9,11 +9,12 @@ import SwiftUI
 
 struct TimeboxCardListView: View {
     @ObservedObject var ActiveTimebox: TimeboxData = TimeboxData.shared
-    @State var isOpen: Bool = false
+    @State public var isOpen: Bool = false
     
     var body: some View {
         if(ActiveTimebox.activeTimebox.count > 0) {
             List {
+                
                 ForEach($ActiveTimebox.activeTimebox) { $tb in
                     
                     let startTime:String = extractTime(extractMode: "hh:mm", el: tb.startTime)
@@ -29,14 +30,15 @@ struct TimeboxCardListView: View {
                             Text(tb.activityName)
                                 .padding(.vertical)
                         }
-                        .sheet(isPresented: $isOpen) {
-                            EditTimeboxView(isEditing: $isOpen,   editingTimebox: $tb)
-                        }
+                        
                     })
+                    .sheet(isPresented: $isOpen) {
+                        EditTimeboxView(isEditing: $isOpen, editingTimebox: $tb)
+                    }
                     .foregroundColor(.black)
                 }
             }
-        }
+        } 
     }
 }
 

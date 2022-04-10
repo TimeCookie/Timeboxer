@@ -12,6 +12,6 @@ class TimeboxData: ObservableObject {
     public var initializing = false
     
     @Published var activeTimebox: [Timebox] = [
-        Timebox(activityName: "Playing game", startTime: Date(), endTime: Date(), reminder: "off", description: "This is a description", isFinished: false)
+        Timebox(activityName: "Start adding timebox", startTime: Date(), endTime: Date(), reminder: "off", description: "This timebox cannot be deleted manually, it will remove itself once you've added at least one timebox", isFinished: false)
     ]
 }

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State public var isPresenting: Bool = false
+    @State public var muteView: Bool = false
     @State var selectedItem: Int = 1
     @State var oldSelectedItem: Int = 1
     

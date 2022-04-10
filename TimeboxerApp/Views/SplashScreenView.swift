@@ -20,7 +20,8 @@ struct SplashScreenView: View {
             }
             else {
                 
-                // Logo here
+                Image("Logo-1")
+
                 
                 Text(quotePicker())
                     .padding()

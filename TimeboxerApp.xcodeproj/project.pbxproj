@@ -13,6 +13,7 @@
 		F28EAE042800087D002C0526 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28EAE032800087D002C0526 /* SplashScreenView.swift */; };
 		F28EAE0628000896002C0526 /* QuotesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28EAE0528000896002C0526 /* QuotesData.swift */; };
 		F28EAE0828000922002C0526 /* QuotePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28EAE0728000922002C0526 /* QuotePicker.swift */; };
+		F29928462802E4A400089211 /* RequestNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29928452802E4A400089211 /* RequestNotification.swift */; };
 		F2A2A65B27FD7953001C4EF8 /* EditTimeboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2A65A27FD7953001C4EF8 /* EditTimeboxView.swift */; };
 		F2A2A66027FD9067001C4EF8 /* Timebox.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2A65F27FD9067001C4EF8 /* Timebox.swift */; };
 		F2A2A68627FDC6BF001C4EF8 /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A2A68527FDC6BF001C4EF8 /* SaveData.swift */; };
@@ -38,6 +39,7 @@
 		F28EAE032800087D002C0526 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		F28EAE0528000896002C0526 /* QuotesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesData.swift; sourceTree = "<group>"; };
 		F28EAE0728000922002C0526 /* QuotePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotePicker.swift; sourceTree = "<group>"; };
+		F29928452802E4A400089211 /* RequestNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestNotification.swift; sourceTree = "<group>"; };
 		F2A2A65A27FD7953001C4EF8 /* EditTimeboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimeboxView.swift; sourceTree = "<group>"; };
 		F2A2A65F27FD9067001C4EF8 /* Timebox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timebox.swift; sourceTree = "<group>"; };
 		F2A2A68527FDC6BF001C4EF8 /* SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
@@ -68,6 +70,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F29928472802E58400089211 /* CRUD */ = {
+			isa = PBXGroup;
+			children = (
+				F2F6BF4E27FF18C100D3B2E2 /* EditData.swift */,
+				F2F6BF4327FEA6E200D3B2E2 /* DeleteData.swift */,
+				F2A2A68527FDC6BF001C4EF8 /* SaveData.swift */,
+			);
+			path = CRUD;
+			sourceTree = "<group>";
+		};
+		F29928482802E5B400089211 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F29928452802E4A400089211 /* RequestNotification.swift */,
+				F28EAE0728000922002C0526 /* QuotePicker.swift */,
+				F20CB282280168B200F64FCB /* TimeWarning.swift */,
+				F2311A3C28015CD000C906F8 /* GreetingCheck.swift */,
+				F2311A3A280158F800C906F8 /* MonthChecker.swift */,
+				F2F6BF4C27FF117D00D3B2E2 /* ExtractTime.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		F2A2A65E27FD9055001C4EF8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,14 +113,8 @@
 		F2A2A68427FDC6AD001C4EF8 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
-				F2A2A68527FDC6BF001C4EF8 /* SaveData.swift */,
-				F2F6BF4327FEA6E200D3B2E2 /* DeleteData.swift */,
-				F2F6BF4C27FF117D00D3B2E2 /* ExtractTime.swift */,
-				F2F6BF4E27FF18C100D3B2E2 /* EditData.swift */,
-				F28EAE0728000922002C0526 /* QuotePicker.swift */,
-				F2311A3A280158F800C906F8 /* MonthChecker.swift */,
-				F2311A3C28015CD000C906F8 /* GreetingCheck.swift */,
-				F20CB282280168B200F64FCB /* TimeWarning.swift */,
+				F29928482802E5B400089211 /* Modules */,
+				F29928472802E58400089211 /* CRUD */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -235,6 +254,7 @@
 				F2C6A3B227FB322700690472 /* ContentView.swift in Sources */,
 				F28EAE042800087D002C0526 /* SplashScreenView.swift in Sources */,
 				F2F6BF4427FEA6E200D3B2E2 /* DeleteData.swift in Sources */,
+				F29928462802E4A400089211 /* RequestNotification.swift in Sources */,
 				F2FE4DE227FBEBC200D280D8 /* NewTimeboxView.swift in Sources */,
 				F20CB283280168B200F64FCB /* TimeWarning.swift in Sources */,
 				F2F6BF3F27FE943100D3B2E2 /* TimeboxCardListView.swift in Sources */,
