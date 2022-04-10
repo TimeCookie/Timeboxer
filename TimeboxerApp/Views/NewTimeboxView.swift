@@ -15,6 +15,8 @@ extension UIScreen{
 
 struct NewTimeboxView: View {
     @State var navigateLink: Bool = false
+    var userName: String = UserDefaults.standard.string(forKey: "USERNAME_KEY") == "" ? "Guest" : UserDefaults.standard.string(forKey: "USERNAME_KEY")!
+    
     var body: some View {
         VStack {
             HStack {
@@ -31,7 +33,7 @@ struct NewTimeboxView: View {
                         
                 }
                 
-                
+    
                 Spacer()
                 
                 VStack {
@@ -40,7 +42,7 @@ struct NewTimeboxView: View {
                         .font(.title3)
                         .padding(.trailing)
                         
-                    Text("Marvin")
+                    Text(userName)
                         .font(.title2)
                         .bold()
                         

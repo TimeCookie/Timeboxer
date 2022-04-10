@@ -17,4 +17,6 @@ func deleteData(_ tb: Timebox) {
             timeboxData.activeTimebox.remove(at: i)
         }
     }
+    
+    timeboxData.initializing = false
 }

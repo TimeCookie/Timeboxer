@@ -11,34 +11,43 @@ struct IntroNameView: View {
     @State public var userName:String = ""
     @State public var pass:Bool = false
     var body: some View {
-        VStack {
+        if((UserDefaults.standard.string(forKey: "USERNAME_KEY")?.isEmpty) == nil) {
             if self.pass {
                 ContentView()
             }
             else {
-                Text("What should we call you?")
-                TextField("", text:$userName)
-                    .multilineTextAlignment(.center)
-                    .font(.title)
-                    .padding()
-                Divider()
-                 .frame(height: 1)
-                 .background(Color.black)
-                Button(action: {
-                    withAnimation {
-                        self.pass = true
-                    }
-                    
-                }, label: {
-                    Text("Continue")
-                        .bold()
-                        .padding(.vertical)
-                })
-                .padding(.vertical)
+                VStack {
+                    Text("What should we call you?")
+                    TextField("", text:$userName)
+                        .multilineTextAlignment(.center)
+                        .font(.title)
+                        .padding()
+                    Divider()
+                     .frame(height: 1)
+                     .background(Color.black)
+                    Button(action: {
+                        DispatchQueue.main.asyncAfter(deadline: .now()) {
+                            withAnimation {
+                                UserDefaults.standard.set(userName, forKey: "USERNAME_KEY")
+                                self.pass = true
+                            }
+                        }
+                        
+                    }, label: {
+                        Text("Continue")
+                            .bold()
+                            .padding(.vertical)
+                    })
+                    .padding(.vertical)
+                }
+                .padding(.horizontal,50)
             }
-            
         }
-        .padding(.horizontal, 50)
+        else {
+            
+            ContentView()
+        }
+        
     }
 }
 

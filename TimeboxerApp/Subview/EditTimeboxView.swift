@@ -73,7 +73,7 @@ struct EditTimeboxView: View {
                               primaryButton: Alert.Button.destructive(Text("Delete")) {
                                     self.isEditing = false
                                     self.showAlert = false
-//                                    deleteData(editingTimebox)
+                                    deleteData(editingTimebox)
                                 },
                               secondaryButton: Alert.Button.cancel()
                         )
