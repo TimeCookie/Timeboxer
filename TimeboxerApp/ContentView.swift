@@ -35,13 +35,6 @@ struct ContentView: View {
 
             }
 
-            MuteReminderView()
-                .tabItem {
-                    Label("Reminders",systemImage: "bell.fill")
-                }.tag(3)
-            .onAppear {
-                self.oldSelectedItem = self.selectedItem
-            }
         }
         .sheet(isPresented: $isPresenting) {
             AddTimeboxView(isPresenting: $isPresenting)

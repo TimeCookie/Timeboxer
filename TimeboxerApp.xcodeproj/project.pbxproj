@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F20CB283280168B200F64FCB /* TimeWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20CB282280168B200F64FCB /* TimeWarning.swift */; };
 		F21F7D722803C7A000B00BE5 /* InitialLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21F7D712803C7A000B00BE5 /* InitialLaunch.swift */; };
+		F21F7D752803D69E00B00BE5 /* NotificationDelivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21F7D742803D69E00B00BE5 /* NotificationDelivery.swift */; };
+		F21F7D772803D8C100B00BE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21F7D762803D8C100B00BE5 /* AppDelegate.swift */; };
 		F2311A3B280158F800C906F8 /* MonthChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2311A3A280158F800C906F8 /* MonthChecker.swift */; };
 		F2311A3D28015CD000C906F8 /* GreetingCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2311A3C28015CD000C906F8 /* GreetingCheck.swift */; };
 		F28EAE042800087D002C0526 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28EAE032800087D002C0526 /* SplashScreenView.swift */; };
@@ -30,12 +32,13 @@
 		F2F6BF4D27FF117D00D3B2E2 /* ExtractTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF4C27FF117D00D3B2E2 /* ExtractTime.swift */; };
 		F2F6BF4F27FF18C100D3B2E2 /* EditData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F6BF4E27FF18C100D3B2E2 /* EditData.swift */; };
 		F2FE4DE227FBEBC200D280D8 /* NewTimeboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE4DE127FBEBC200D280D8 /* NewTimeboxView.swift */; };
-		F2FE4DE827FC3E4600D280D8 /* MuteReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FE4DE727FC3E4600D280D8 /* MuteReminderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F20CB282280168B200F64FCB /* TimeWarning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeWarning.swift; sourceTree = "<group>"; };
 		F21F7D712803C7A000B00BE5 /* InitialLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialLaunch.swift; sourceTree = "<group>"; };
+		F21F7D742803D69E00B00BE5 /* NotificationDelivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDelivery.swift; sourceTree = "<group>"; };
+		F21F7D762803D8C100B00BE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2311A3A280158F800C906F8 /* MonthChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthChecker.swift; sourceTree = "<group>"; };
 		F2311A3C28015CD000C906F8 /* GreetingCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingCheck.swift; sourceTree = "<group>"; };
 		F28EAE032800087D002C0526 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -58,7 +61,6 @@
 		F2F6BF4C27FF117D00D3B2E2 /* ExtractTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractTime.swift; sourceTree = "<group>"; };
 		F2F6BF4E27FF18C100D3B2E2 /* EditData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditData.swift; sourceTree = "<group>"; };
 		F2FE4DE127FBEBC200D280D8 /* NewTimeboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTimeboxView.swift; sourceTree = "<group>"; };
-		F2FE4DE727FC3E4600D280D8 /* MuteReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuteReminderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F21F7D732803D66B00B00BE5 /* NotificationHandler */ = {
+			isa = PBXGroup;
+			children = (
+				F29928452802E4A400089211 /* RequestNotification.swift */,
+				F21F7D742803D69E00B00BE5 /* NotificationDelivery.swift */,
+			);
+			path = NotificationHandler;
+			sourceTree = "<group>";
+		};
 		F29928472802E58400089211 /* CRUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +96,6 @@
 		F29928482802E5B400089211 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				F29928452802E4A400089211 /* RequestNotification.swift */,
 				F28EAE0728000922002C0526 /* QuotePicker.swift */,
 				F20CB282280168B200F64FCB /* TimeWarning.swift */,
 				F2311A3C28015CD000C906F8 /* GreetingCheck.swift */,
@@ -115,6 +125,7 @@
 		F2A2A68427FDC6AD001C4EF8 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				F21F7D732803D66B00B00BE5 /* NotificationHandler */,
 				F29928482802E5B400089211 /* Modules */,
 				F29928472802E58400089211 /* CRUD */,
 			);
@@ -150,6 +161,7 @@
 				F2C6A3B327FB322800690472 /* Assets.xcassets */,
 				F2C6A3B527FB322800690472 /* Preview Content */,
 				F21F7D712803C7A000B00BE5 /* InitialLaunch.swift */,
+				F21F7D762803D8C100B00BE5 /* AppDelegate.swift */,
 			);
 			path = TimeboxerApp;
 			sourceTree = "<group>";
@@ -166,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				F2FE4DE127FBEBC200D280D8 /* NewTimeboxView.swift */,
-				F2FE4DE727FC3E4600D280D8 /* MuteReminderView.swift */,
 				F2F6BF4727FEAB2A00D3B2E2 /* IntroNameView.swift */,
 				F28EAE032800087D002C0526 /* SplashScreenView.swift */,
 			);
@@ -253,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21F7D772803D8C100B00BE5 /* AppDelegate.swift in Sources */,
 				F2F6BF4D27FF117D00D3B2E2 /* ExtractTime.swift in Sources */,
 				F2C6A3B227FB322700690472 /* ContentView.swift in Sources */,
 				F28EAE042800087D002C0526 /* SplashScreenView.swift in Sources */,
@@ -266,6 +278,7 @@
 				F2A2A66027FD9067001C4EF8 /* Timebox.swift in Sources */,
 				F2F6BF4F27FF18C100D3B2E2 /* EditData.swift in Sources */,
 				F2311A3B280158F800C906F8 /* MonthChecker.swift in Sources */,
+				F21F7D752803D69E00B00BE5 /* NotificationDelivery.swift in Sources */,
 				F2A2A68627FDC6BF001C4EF8 /* SaveData.swift in Sources */,
 				F2F6BF4827FEAB2A00D3B2E2 /* IntroNameView.swift in Sources */,
 				F2311A3D28015CD000C906F8 /* GreetingCheck.swift in Sources */,
@@ -274,7 +287,6 @@
 				F2A2A65B27FD7953001C4EF8 /* EditTimeboxView.swift in Sources */,
 				F2F6BF4A27FF0A1300D3B2E2 /* TimeboxData.swift in Sources */,
 				F28EAE0828000922002C0526 /* QuotePicker.swift in Sources */,
-				F2FE4DE827FC3E4600D280D8 /* MuteReminderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

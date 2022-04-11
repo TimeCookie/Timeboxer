@@ -42,21 +42,7 @@ struct AddTimeboxView: View {
                         }
                     }
                     
-                    Section(header:Text("Reminder Setting")) {
-                        List {
-                            Menu(self.reminder) {
-                                Button("5 minutes after", action: {
-                                    self.reminder = "5 minutes after"
-                                })
-                                Button("5 minutes before", action: {
-                                    self.reminder = "5 minutes before"
-                                })
-                                Button("Turn off reminder", action: {
-                                    self.reminder = "off"
-                                })
-                            }
-                        }
-                    }
+                    
                     Section(header: Text("Additional Info")) {
                         List {
                             TextEditor(text: $additionalInfo)

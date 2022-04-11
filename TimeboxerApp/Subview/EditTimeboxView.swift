@@ -35,21 +35,7 @@ struct EditTimeboxView: View {
                             )
                         }
                     }
-                    Section(header: Text("Reminder Setting")) {
-                        List {
-                            Menu("Reminder") {
-                                Button("5 minutes after", action: {
-                                    editingTimebox.reminder = "5 minutes after"
-                                })
-                                Button("5 minutes before", action: {
-                                    editingTimebox.reminder = "5 minutes before"
-                                })
-                                Button("Turn off reminder", action: {
-                                    editingTimebox.reminder = "off"
-                                })
-                            }
-                        }
-                    }
+                    
                     Section(header: Text("Additional Info")) {
                         List {
                             TextEditor(text:$editingTimebox.description)

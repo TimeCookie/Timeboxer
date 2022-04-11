@@ -57,6 +57,9 @@ struct NewTimeboxView: View {
             
             
         }
+        .onAppear {
+            requestNotification()
+        }
     }
 }
 

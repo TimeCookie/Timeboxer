@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UserNotifications
 
 func editData(_ tb: Timebox) {
     let timeboxId = tb.id
@@ -24,4 +25,17 @@ func editData(_ tb: Timebox) {
             break
         }
     }
+    
+    UNUserNotificationCenter.current().getPendingNotificationRequests { (notificationRequests) in
+       var identifiers: [String] = []
+       for notification:UNNotificationRequest in notificationRequests {
+           if notification.identifier == timeboxId?.uuidString {
+               identifiers.append(notification.identifier)
+               break
+           }
+       }
+       UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers)
+    }
+    
+    sendNotification(id: tb.id!, endTime: tb.endTime)
 }

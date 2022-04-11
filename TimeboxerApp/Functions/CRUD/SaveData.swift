@@ -20,5 +20,7 @@ func saveData(_ tb:Timebox) {
     localStorage.activeTimebox.append(tb)
     timeboxData.activeTimebox.append(tb)
     
+    sendNotification(id: tb.id!, endTime: tb.endTime)
+    
 }
 

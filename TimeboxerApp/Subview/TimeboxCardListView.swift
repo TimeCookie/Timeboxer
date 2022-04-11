@@ -25,7 +25,9 @@ struct TimeboxCardListView: View {
                     }, label: {
                         HStack {
                             Text("\(startTime) - \(endTime)")
+                                .fontWeight(.bold)
                                 .padding(.vertical)
+                                
                             Spacer()
                             Text(tb.activityName)
                                 .padding(.vertical)
