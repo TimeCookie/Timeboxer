@@ -10,6 +10,7 @@ import Foundation
 func editData(_ tb: Timebox) {
     let timeboxId = tb.id
     let timeboxData = TimeboxData.shared
+    let db = UserDefaults.standard
     
     for i in 0..<timeboxData.activeTimebox.count {
         if(timeboxData.activeTimebox[i].id == timeboxId) {
@@ -17,6 +18,10 @@ func editData(_ tb: Timebox) {
             break
         }
     }
-    
-    // Sets UserDefault
+    for i in 0..<db.activeTimebox.count {
+        if(db.activeTimebox[i].id == timeboxId) {
+            db.activeTimebox[i] = tb
+            break
+        }
+    }
 }

@@ -11,14 +11,14 @@ import Foundation
 func saveData(_ tb:Timebox) {
     
     let timeboxData: TimeboxData = TimeboxData.shared
+    let localStorage = UserDefaults.standard
 
-    if(timeboxData.activeTimebox.count == 1) {
-        timeboxData.activeTimebox = []
+    if(timeboxData.activeTimebox[0].isFinished == true) {
+        timeboxData.activeTimebox.remove(at: 0)
     }
     
+    localStorage.activeTimebox.append(tb)
     timeboxData.activeTimebox.append(tb)
-    print(timeboxData.activeTimebox)
-//    UserDefaults.standard.removeObject(forKey: "USERNAME_KEY")
-//    UserDefaults.standard.setValue(activeTimebox,forKey: "TIMEBOX_DATA")
+    
 }
 

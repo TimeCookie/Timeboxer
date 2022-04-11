@@ -7,7 +7,19 @@
 
 import Foundation
 
-struct Timebox: Identifiable {
+extension UserDefaults {
+    var activeTimebox: [Timebox] {
+        get {
+            guard let data = UserDefaults.standard.data(forKey: "ACTIVE_TIMEBOX") else { return [] }
+            return (try? PropertyListDecoder().decode([Timebox].self,from:data)) ?? []
+        }
+        set {
+            UserDefaults.standard.set(try? PropertyListEncoder().encode(newValue), forKey: "ACTIVE_TIMEBOX")
+        }
+    }
+}
+
+struct Timebox: Identifiable, Codable {
     var id:UUID?
     var activityName: String
     var startTime: Date
@@ -15,5 +27,5 @@ struct Timebox: Identifiable {
     var reminder: String
     var description: String
     var isFinished: Bool
-
+    
 }
