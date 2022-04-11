@@ -19,15 +19,17 @@ struct SplashScreenView: View {
                 
             }
             else {
-                
-                Image("Logo-1")
+                Image("newlogo")
+                    .resizable()
+                    .frame(width: 250, height: 250)
 
-                
                 Text(quotePicker())
                     .padding()
+                    .multilineTextAlignment(.center)
             }
         }
         .onAppear {
+            launch()
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 withAnimation {
                     self.isActive = true
